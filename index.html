@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rus Daniel — Cabinet Individual de Psihologie</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --bg: #F9FAFB;          /* fundal deschis */
+      --card: #FFFFFF;
+      --text: #1F2937;        /* text inchis */
+      --muted: #6B7280;       /* gri muted */
+      --accent: #2563EB;      /* albastru */
+      --accent-2: #10B981;    /* verde pastel */
+      --radius: 14px;
+      --container: 1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background:var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+
+    a{color:inherit; text-decoration:none}
+    img{max-width:100%;display:block}
+
+    .container{max-width:var(--container);margin:0 auto;padding:0 20px}
+
+    /* Header */
+    header{position:sticky;top:0;background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);z-index:60;border-bottom:1px solid rgba(31,41,55,0.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:90px;height:90px;display:flex;align-items:center;justify-content:center}
+    .logo img{width:100%;height:100%;object-fit:contain}
+    nav ul{display:flex;gap:20px;align-items:center;margin:0;padding:0;list-style:none}
+    nav a{font-weight:600;color:var(--muted)}
+    .cta{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;font-weight:600}
+
+    /* Hero */
+    .hero{padding:56px 0;display:grid;grid-template-columns:1fr 420px;gap:40px;align-items:center}
+    .hero-left h1{font-family:'Montserrat',sans-serif;font-size:36px;margin:0 0 12px}
+    .hero-left p{margin:0 0 20px;color:var(--muted);max-width:66ch}
+    .hero-actions{display:flex;gap:12px}
+    .btn{display:inline-block;padding:12px 16px;border-radius:12px;font-weight:600;cursor:pointer}
+    .btn-primary{background:var(--accent);color:white}
+    .btn-outline{background:transparent;border:1px solid rgba(31,41,55,0.12)}
+
+    .hero-card{background:var(--card);border-radius:16px;padding:18px;box-shadow:0 8px 30px rgba(31,41,55,0.06)}
+    .profile{display:flex;gap:14px;align-items:center}
+    .avatar{width:84px;height:84px;border-radius:12px;overflow:hidden}
+    .avatar img{width:100%;height:100%;object-fit:cover}
+    .profile h3{margin:0;font-size:18px}
+    .profile p{margin:4px 0 0;color:var(--muted)}
+
+    /* Services */
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:40px 0}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(31,41,55,0.05)}
+    .card h4{margin:0 0 8px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+
+    /* Portfolio */
+    .portfolio{margin:36px 0}
+    .grid-portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .project{border-radius:12px;overflow:hidden;position:relative}
+    .project .meta{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,0.5);color:white;padding:8px 10px;border-radius:10px;font-size:13px}
+
+    /* Testimonials */
+    .testimonials{margin:36px 0;display:flex;gap:12px;align-items:center}
+    .testimonial{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 20px rgba(31,41,55,0.05)}
+    .testimonial p{margin:0;color:var(--muted)}
+
+    /* CTA strip */
+    .cta-strip{background:linear-gradient(90deg,var(--accent-2),var(--accent));color:white;padding:28px;border-radius:16px;display:flex;align-items:center;justify-content:space-between;margin:36px 0}
+
+    /* Footer */
+    footer{padding:28px 0;color:var(--muted);font-size:14px}
+    .socials{display:flex;gap:10px}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .services{grid-template-columns:repeat(2,1fr)}
+      .grid-portfolio{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:560px){
+      nav ul{display:none}
+      .services{grid-template-columns:1fr}
+      .grid-portfolio{grid-template-columns:1fr}
+      .hero-left h1{font-size:28px}
+    }
+
+    /* small helpers */
+    .muted{color:var(--muted)}
+    .mb-8{margin-bottom:32px}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden><img src="images/logo dani rus.jpg" alt="Logo Rus Daniel"></div>
+        <div>
+          <div style="font-weight:700">Rus Daniel</div>
+          <div style="font-size:12px;color:var(--muted)">Cabinet Individual de Psihologie</div>
+        </div>
+      </div>
+
+      <nav aria-label="Meniu principal">
+        <ul>
+          <li><a href="index.html#home">Acasă</a></li>
+          <li><a href="despre.html">Despre</a></li>
+          <li><a href="servicii.html">Servicii</a></li>
+          <li><a href="materiale.html">Materiale gratuite</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <a class="cta" href="contact.html">Colaborează</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="home">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-left">
+        <h1 id="hero-heading">Rus Daniel — Cabinet Individual de Psihologie</h1>
+        <p>Cabinetul de Psihologie oferă servicii specializate de evaluare psihopedagogică și intervenții personalizate, adresate copiilor, adolescenților și tinerilor care întâmpină dificultăți de dezvoltare, învățare sau adaptare. Activitatea cabinetului este centrată pe sprijinirea potențialului individual și pe dezvoltarea armonioasă a fiecărei persoane, prin programe structurate, adaptate nevoilor specifice.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="portofoliu.html">Vezi portofoliul</a>
+          <a class="btn btn-outline" href="contact.html">Contact</a>
+        </div>
+
+        <div style="margin-top:28px;display:flex;gap:12px;align-items:center">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div style="background:var(--card);padding:10px;border-radius:10px;box-shadow:0 8px 20px rgba(31,41,55,0.05)">
+              <strong>CIF:</strong> 47454712
+            </div>
+            <div style="background:var(--card);padding:10px;border-radius:10px;box-shadow:0 8px 20px rgba(31,41,55,0.05)">
+              <strong>Telefon:</strong> 0741144218
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="card prezentare">
+        <div class="profile">
+          <div class="avatar"><img src="images/poza-ta.jpeg" alt="Rus Daniel"></div>
+          <div>
+            <h3>Rus Daniel</h3>
+            <p class="muted">Psiholog în Psihopedagogie Specială</p>  
+            <p class="muted" style="font-size:13px;margin-top:8px">Sunt dedicat să ofer sprijin și să ajut la creșterea ta personală și emoțională.</p>
+          </div>
+        </div>
+        <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+          <a class="btn btn-primary" href="contact.html">Solicită o consultație</a>
+          <a class="btn btn-outline" href="despre.html">Despre mine</a>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Noutăți -->
+    <section aria-label="Noutăți materiale gratuite" style="max-width:700px;margin:40px auto;">
+      <h2 style="font-family:'Montserrat',sans-serif;color:var(--text);margin-bottom:16px;">Ultime materiale incărcate</h2>
+      <div class="materials" aria-label="Ultimele materiale gratuite">
+        <div class="material active" id="noutate-1">
+          <div class="material-title">Program de intervenție pentru îmbunătățirea competențelor în citire la elevii cu dizabilitate intelectuală moderată</div>
+          <div class="material-desc">Sfaturi practice pentru îmbunătățirea competențelor în citire la elevii cu dizabilitate intelectuală moderată</div>
+        </div>
+      </div>
+
+      <div style="display:flex;justify-content:center;gap:14px;margin-top:18px;">
+        <button class="btn btn-outline" aria-label="Material anterior" id="prev">Anterior</button>
+        <button class="btn btn-outline" aria-label="Material următor" id="next">Următor</button>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" aria-labelledby="contact-heading" class="mb-8">
+      <h2 id="contact-heading" style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:24px;margin-bottom:18px">Contact</h2>
+      <div style="background:var(--card);padding:24px;border-radius:14px;max-width:480px;">
+        <p><strong>Adresă:</strong> str. Păcii, nr. 3, ap. 12, Zalău, Sălaj</p>
+        <p><strong>Telefon:</strong> +40 741 144 218</p>
+        <p><strong>Email:</strong> rusdaniel.cabinetdepsihologie@gmail.com</p>
+        <p><strong>Facebook:</strong> <a href="https://www.facebook.com/share/15tBHynW69/" target="_blank" rel="noopener noreferrer">rusdaniel.psiholog</a></p>
+        <p><strong>CIF:</strong> 47454712</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="container" role="contentinfo">
+    <div style="display:flex;justify-content:center;gap:12px;align-items:center;padding:24px 0;color:var(--muted);font-size:13px">
+      <span>© 2025 Rus Daniel</span>
+      <a href="https://www.facebook.com/share/15tBHynW69/" target="_blank" rel="noopener noreferrer" aria-label="Facebook Rus Daniel">
+        <svg height="20" viewBox="0 0 24 24" width="20" fill="currentColor" aria-hidden="true">
+          <path d="M22 12a10 10 0 1 0-11.5 9.86v-7h-3v-3h3v-2a4 4 0 0 1 4-4h3v3h-3a1 1 0 0 0-1 1v2h4l-1 3h-3v7A10 10 0 0 0 22 12z"></path>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const materials = document.querySelectorAll('.material');
+      const btnNext = document.getElementById('next');
+      const btnPrev = document.getElementById('prev');
+      let current = 0;
+
+      function showMaterial(index) {
+        materials.forEach((mat, i) => {
+          if (i === index) {
+            mat.classList.add('active');
+            mat.removeAttribute('hidden');
+          } else {
+            mat.classList.remove('active');
+            mat.setAttribute('hidden', '');
+          }
+        });
+      }
+
+      btnNext.addEventListener('click', () => {
+        current = (current + 1) % materials.length;
+        showMaterial(current);
+      });
+
+      btnPrev.addEventListener('click', () => {
+        current = (current - 1 + materials.length) % materials.length;
+        showMaterial(current);
+      });
+    });
+  </script>
+
+</body>
+</html>
